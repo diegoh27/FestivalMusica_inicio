@@ -1,4 +1,4 @@
-Título del Proyecto
+Landing Music Festival
 Breve descripción del proyecto: Una landing page responsiva de 4 secciones diseñada con HTML5, estilizada con SCSS, y 
 con funcionalidades dinámicas 
 implementadas mediante JavaScript Vanilla. El proyecto utiliza Gulp para automatizar y mejorar el flujo de trabajo 
