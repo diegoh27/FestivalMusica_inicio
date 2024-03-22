@@ -18,7 +18,7 @@ function css(css) {
   src("src/scss/**/*.scss") // identificar el archivo SASS
     .pipe(plumber())
     .pipe(sass()) //Compilarlo
-    .pipe(postcss([autoprefixer(), cssnano()]))
+    // .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("build/css")); //Almacenarla en el disco
 
   css(); // callback que avisa cuando llegamos al final
@@ -66,4 +66,11 @@ exports.js = javaScript;
 exports.imagenes = imagenes;
 exports.versionWebp = versionWebp;
 exports.versionAvif = versionAvif;
-exports.dev = parallel(versionAvif, imagenes, versionWebp, javaScript, dev);
+exports.dev = parallel(
+  versionAvif,
+  imagenes,
+  versionWebp,
+  css,
+  javaScript,
+  dev
+);
