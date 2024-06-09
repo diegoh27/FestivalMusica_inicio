@@ -1,0 +1,46 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.sobre-festival {
+  padding: 5rem;
+
+  @include m.tablet {
+    @include m.grid(2, 5rem);
+  }
+
+  @include m.phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include m.desktop {
+    @include m.grid(2, 5rem);
+  }
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include m.phone {
+    padding: 2rem;
+  }
+  @include m.tablet {
+    padding: 0;
+  }
+  h2 {
+    margin-bottom: 2rem;
+    margin: 0;
+  }
+  .fecha {
+    font-weight: 700;
+    color: v.$rosa;
+  }
+}
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+}
